@@ -7,7 +7,7 @@ import {
   TextInput,
 } from 'react-native';
 
-export default function App() {
+export default function Tela_Perfil_Cliente({navigation}) {
   return (
     <ScrollView
       style={{ backgroundColor: '#FFF6B6' }}
@@ -20,7 +20,7 @@ export default function App() {
             marginBottom: 10,
             flexDirection: 'row',
           }}>
-          <TouchableOpacity onPress={() => ''}>
+          <TouchableOpacity onPress={() => navigation.navigate('TelaInicial')}>
             <Image
               source={require('../../assets/Icone_proagenda.png')}
               style={{
@@ -136,7 +136,7 @@ export default function App() {
           <Text style={{ color: 'white' }}>SALVAR ALTERAÇÕES</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => ''}
+          onPress={() => navigation.navigate('TelaManutencaoClientes')}
           style={{
             height: 40,
             width: 115,

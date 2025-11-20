@@ -7,7 +7,7 @@ import {
   TextInput,
 } from 'react-native';
 
-export default function Tela_Adicionar_Cliente({navigation}) {
+export default function App() {
   return (
     <ScrollView
       style={{ backgroundColor: '#FFF6B6' }}
@@ -20,9 +20,9 @@ export default function Tela_Adicionar_Cliente({navigation}) {
             marginBottom: 10,
             flexDirection: 'row',
           }}>
-          <TouchableOpacity onPress={() => navigation.navigate('TelaInicial')}>
+          <TouchableOpacity onPress={() => ''}>
             <Image
-              source={require('../../assets/Icone_proagenda.png')}
+              source={require('./assets/Icone_proagenda.png')}
               style={{
                 height: 50,
                 width: 50,
@@ -36,13 +36,10 @@ export default function Tela_Adicionar_Cliente({navigation}) {
               Agedamento de serviços para profissionais autônomos
             </Text>
           </View>
-          <View style={{ flexDirection: 'column' }}>
-            <TouchableOpacity></TouchableOpacity>
-          </View>
         </View>
       </View>
       <Text style={{ fontFamily: 'Arial', fontSize: 25, margin: 15 }}>
-        Nome do Cliente
+        Email:
       </Text>
       <TextInput
         style={{
@@ -54,12 +51,12 @@ export default function Tela_Adicionar_Cliente({navigation}) {
           backgroundColor: 'white',
           fontWeight: 'bold',
         }}
-        placeholder="André Matias"
+        placeholder=""
         editable={true}
         placeholderTextColor="gray"
       />
       <Text style={{ fontFamily: 'Arial', fontSize: 25, margin: 15 }}>
-        Telefone do Cliente
+        Senha:
       </Text>
       <TextInput
         style={{
@@ -71,28 +68,16 @@ export default function Tela_Adicionar_Cliente({navigation}) {
           backgroundColor: 'white',
           fontWeight: 'bold',
         }}
-        placeholder="(xx) xxxxx-xxxx"
+        placeholder=""
         editable={true}
         placeholderTextColor="gray"
       />
-      <Text style={{ fontFamily: 'Arial', fontSize: 25, margin: 15 }}>
-        Endereço do Cliente
-      </Text>
-      <TextInput
+      <View
         style={{
-          height: 30,
-          width: 138,
-          borderWidth: 0,
-          borderRadius: 10,
-          marginStart: 15,
-          backgroundColor: 'white',
-          fontWeight: 'bold',
-        }}
-        placeholder="xxxxxxxxxxxxxxxxx"
-        editable={true}
-        placeholderTextColor="gray"
-      />
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
         <TouchableOpacity
           onPress={() => ''}
           style={{
@@ -100,10 +85,17 @@ export default function Tela_Adicionar_Cliente({navigation}) {
             width: 135,
             backgroundColor: '#6631d7',
             borderRadius: 50,
-            justifyContent: 'center',
+            marginTop: 150,
             alignItems: 'center',
+            justifyContent: 'center',
           }}>
-          <Text style={{ color: 'white' }}>SALVAR CLIENTE</Text>
+          <Text
+            style={{
+              fontFamily: 'Arial',
+              color: 'white'
+            }}>
+            ENVIAR
+          </Text>
         </TouchableOpacity>
       </View>
     </ScrollView>

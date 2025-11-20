@@ -7,7 +7,7 @@ import {
   Image,
 } from 'react-native';
 
-export default function App() {
+export default function Tela_Manutencao_Clientes({navigation}) {
   return (
     <ScrollView style={{backgroundColor: '#FFF6B6' }}>
       <View
@@ -26,7 +26,7 @@ export default function App() {
             marginBottom: 10,
             flexDirection: 'row',
           }}>
-          <TouchableOpacity onPress={() => ''}>
+          <TouchableOpacity onPress={() => navigation.navigate('TelaInicial')}>
             <Image
               source={require('../../assets/Icone_proagenda.png')}
               style={{
@@ -54,7 +54,7 @@ export default function App() {
           borderWidth: 2,
         }}>
         <TouchableOpacity
-          onPress={() => ''}
+          onPress={() => navigation.navigate('TelaAdicionarCliente')}
           style={{
             height: 30,
             width: 135,
@@ -117,7 +117,7 @@ export default function App() {
           placeholderTextColor="gray"
         />
         <View style={{ flexDirection: 'column' }}>
-          <TouchableOpacity onPress={() => ''}>
+          <TouchableOpacity onPress={() => navigation.navigate('TelaPerfilCliente')}>
             <Image
               source={require('../../assets/icone-perfil.png')}
               style={{
@@ -170,7 +170,7 @@ export default function App() {
           placeholderTextColor="gray"
         />
         <View style={{ flexDirection: 'column' }}>
-          <TouchableOpacity onPress={() => ''}>
+          <TouchableOpacity onPress={() => navigation.navigate('TelaPerfilCliente')}>
             <Image
               source={require('../../assets/icone-perfil.png')}
               style={{
@@ -223,7 +223,7 @@ export default function App() {
           placeholderTextColor="gray"
         />
         <View style={{ flexDirection: 'column' }}>
-          <TouchableOpacity onPress={() => ''}>
+          <TouchableOpacity onPress={() => navigation.navigate('TelaPerfilCliente')}>
             <Image
               source={require('../../assets/icone-perfil.png')}
               style={{
@@ -276,7 +276,7 @@ export default function App() {
           placeholderTextColor="gray"
         />
         <View style={{ flexDirection: 'column' }}>
-          <TouchableOpacity onPress={() => ''}>
+          <TouchableOpacity onPress={() => navigation.navigate('TelaPerfilCliente')}>
             <Image
               source={require('../../assets/icone-perfil.png')}
               style={{
@@ -329,7 +329,7 @@ export default function App() {
           placeholderTextColor="gray"
         />
         <View style={{ flexDirection: 'column' }}>
-          <TouchableOpacity onPress={() => ''}>
+          <TouchableOpacity onPress={() => navigation.navigate('TelaPerfilCliente')}>
             <Image
               source={require('../../assets/icone-perfil.png')}
               style={{

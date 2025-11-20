@@ -7,7 +7,7 @@ import {
   TextInput,
 } from 'react-native';
 
-export default function Tela_Edicao_Agendamento({navigation}) {
+export default function App() {
   return (
     <ScrollView
       style={{ backgroundColor: '#FFF6B6' }}
@@ -20,7 +20,7 @@ export default function Tela_Edicao_Agendamento({navigation}) {
             marginBottom: 10,
             flexDirection: 'row',
           }}>
-          <TouchableOpacity onPress={() => navigation.navigate('TelaInicial')}>
+          <TouchableOpacity onPress={() => ''}>
             <Image
               source={require('../../assets/Icone_proagenda.png')}
               style={{
@@ -39,7 +39,7 @@ export default function Tela_Edicao_Agendamento({navigation}) {
         </View>
       </View>
       <Text style={{ fontFamily: 'Arial', fontSize: 25, margin: 15 }}>
-        Cliente
+        Nome Completo:
       </Text>
       <TextInput
         style={{
@@ -51,45 +51,12 @@ export default function Tela_Edicao_Agendamento({navigation}) {
           backgroundColor: 'white',
           fontWeight: 'bold',
         }}
-        placeholder="André Matias"
+        placeholder=""
         editable={true}
         placeholderTextColor="gray"
       />
       <Text style={{ fontFamily: 'Arial', fontSize: 25, margin: 15 }}>
-        Data e Hora do Agedamento
-      </Text>
-      <View style={{ flexDirection: 'row' }}>
-        <TextInput
-          style={{
-            height: 30,
-            width: 138,
-            borderWidth: 0,
-            borderRadius: 10,
-            marginStart: 15,
-            backgroundColor: 'white',
-            fontWeight: 'bold',
-          }}
-          placeholder="XX/XX/XXXX"
-          editable={true}
-          placeholderTextColor="gray"
-        />
-        <TextInput
-          style={{
-            height: 30,
-            width: 50,
-            borderWidth: 0,
-            borderRadius: 10,
-            marginStart: 30,
-            backgroundColor: 'white',
-            fontWeight: 'bold',
-          }}
-          placeholder="XX:XX"
-          editable={true}
-          placeholderTextColor="gray"
-        />
-      </View>
-      <Text style={{ fontFamily: 'Arial', fontSize: 25, margin: 15 }}>
-        Endereço do Cliente
+        Email:
       </Text>
       <TextInput
         style={{
@@ -101,40 +68,47 @@ export default function Tela_Edicao_Agendamento({navigation}) {
           backgroundColor: 'white',
           fontWeight: 'bold',
         }}
-        placeholder="xxxxxxxxxxxxxxxxx"
+        placeholder=""
         editable={true}
         placeholderTextColor="gray"
       />
-      <View
+      <Text style={{ fontFamily: 'Arial', fontSize: 25, margin: 15 }}>
+        Senha:
+      </Text>
+      <TextInput
         style={{
-          marginTop: 15,
-          marginBottom: 15,
-          height: 60,
-          borderWidth: 2,
-          borderRightColor: '#fff6b6',
-          borderLeftColor: '#fff6b6',
-          justifyContent: 'center',
-          alignItems: 'end',
-        }}>
-        <TouchableOpacity
-          style={{
-            backgroundColor: 'red',
-            height: 40,
-            width: 150,
-            marginEnd: 15,
-            borderRadius: 50,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
-          <Text style={{ fontFamily: 'Arial', color: '#fff6b6' }}>
-            REMOVER VAGA
-          </Text>
-        </TouchableOpacity>
-      </View>
+          height: 30,
+          width: 138,
+          borderWidth: 0,
+          borderRadius: 10,
+          marginStart: 15,
+          backgroundColor: 'white',
+          fontWeight: 'bold',
+        }}
+        placeholder=""
+        editable={true}
+        placeholderTextColor="gray"
+      />
+      <Text style={{ fontFamily: 'Arial', fontSize: 25, margin: 15 }}>
+        Confirmação de Senha:
+      </Text>
+      <TextInput
+        style={{
+          height: 30,
+          width: 138,
+          borderWidth: 0,
+          borderRadius: 10,
+          marginStart: 15,
+          backgroundColor: 'white',
+          fontWeight: 'bold',
+        }}
+        placeholder=""
+        editable={true}
+        placeholderTextColor="gray"
+      />
       <View
         style={{
           flex: 1,
-          flexDirection: 'row',
           justifyContent: 'center',
           alignItems: 'center',
         }}>
@@ -154,26 +128,7 @@ export default function Tela_Edicao_Agendamento({navigation}) {
               color: 'white',
               textAlign: 'center',
             }}>
-            SALVAR ALTERAÇÕES
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => ''}
-          style={{
-            height: 40,
-            width: 135,
-            backgroundColor: '#6631d7',
-            borderRadius: 50,
-            marginEnd: 15,
-            justifyContent: 'center',
-          }}>
-          <Text
-            style={{
-              fontFamily: 'Arial',
-              color: 'white',
-              textAlign: 'center',
-            }}>
-            CANCELAR
+            ENVIAR
           </Text>
         </TouchableOpacity>
       </View>
