@@ -7,7 +7,7 @@ import {
   Image,
 } from 'react-native';
 
-export default function Tela_Manutencao_Agendamentos({navigation}) {
+export default function Tela_Manutencao_Agendamentos({ navigation }) {
   return (
     <ScrollView style={{ backgroundColor: '#FFF6B6' }}>
       <View
@@ -91,7 +91,8 @@ export default function Tela_Manutencao_Agendamentos({navigation}) {
           AGENDAMENTOS
         </Text>
       </View>
-      <View
+      <TouchableOpacity
+        onPress={() => navigation.navigate('TelaEdicaoAgendamento')}
         style={{
           backgroundColor: '#fff6b6',
           height: 70,
@@ -101,7 +102,8 @@ export default function Tela_Manutencao_Agendamentos({navigation}) {
           borderWidth: 2,
           flexDirection: 'row',
           justifyContent: 'space-around',
-        }}>
+        }}
+      >
         <View
           style={{
             alignItems: 'start',
@@ -160,8 +162,9 @@ export default function Tela_Manutencao_Agendamentos({navigation}) {
             placeholderTextColor="gray"
           />
         </View>
-      </View>
-      <View
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('TelaEdicaoAgendamento')}
         style={{
           backgroundColor: '#fff6b6',
           height: 70,
@@ -171,7 +174,8 @@ export default function Tela_Manutencao_Agendamentos({navigation}) {
           borderWidth: 2,
           flexDirection: 'row',
           justifyContent: 'space-around',
-        }}>
+        }}
+      >
         <View
           style={{
             alignItems: 'start',
@@ -230,8 +234,9 @@ export default function Tela_Manutencao_Agendamentos({navigation}) {
             placeholderTextColor="gray"
           />
         </View>
-      </View>
-      <View
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('TelaEdicaoAgendamento')}
         style={{
           backgroundColor: '#fff6b6',
           height: 70,
@@ -241,7 +246,8 @@ export default function Tela_Manutencao_Agendamentos({navigation}) {
           borderWidth: 2,
           flexDirection: 'row',
           justifyContent: 'space-around',
-        }}>
+        }}
+      >
         <View
           style={{
             alignItems: 'start',
@@ -300,8 +306,9 @@ export default function Tela_Manutencao_Agendamentos({navigation}) {
             placeholderTextColor="gray"
           />
         </View>
-      </View>
-      <View
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('TelaEdicaoAgendamento')}
         style={{
           backgroundColor: '#fff6b6',
           height: 70,
@@ -311,7 +318,8 @@ export default function Tela_Manutencao_Agendamentos({navigation}) {
           borderWidth: 2,
           flexDirection: 'row',
           justifyContent: 'space-around',
-        }}>
+        }}
+      >
         <View
           style={{
             alignItems: 'start',
@@ -370,8 +378,9 @@ export default function Tela_Manutencao_Agendamentos({navigation}) {
             placeholderTextColor="gray"
           />
         </View>
-      </View>
-      <View
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('TelaEdicaoAgendamento')}
         style={{
           backgroundColor: '#fff6b6',
           height: 70,
@@ -381,7 +390,8 @@ export default function Tela_Manutencao_Agendamentos({navigation}) {
           borderWidth: 2,
           flexDirection: 'row',
           justifyContent: 'space-around',
-        }}>
+        }}
+      >
         <View
           style={{
             alignItems: 'start',
@@ -440,7 +450,7 @@ export default function Tela_Manutencao_Agendamentos({navigation}) {
             placeholderTextColor="gray"
           />
         </View>
-      </View>
+      </TouchableOpacity>
     </ScrollView>
   );
 }

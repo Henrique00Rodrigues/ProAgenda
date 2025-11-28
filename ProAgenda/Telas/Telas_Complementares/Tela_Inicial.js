@@ -8,72 +8,86 @@ import {
 import React, { useState } from "react";
 
 export default function Tela_Inicial({navigation}) {
-
   const [open, setOpen] = useState(false);
 
   return (
-    <ScrollView style={{backgroundColor: '#FFF6B6'}}>
+    <View style={{ flex: 1, backgroundColor: '#FFF6B6' }}>
       
-        <View style={{ backgroundColor: '#c6dcff', height: 70 }}>
-          <View
+      {/* HEADER FIXO */}
+      <View
+        style={{
+          backgroundColor: '#c6dcff',
+          height: 70,
+          position: 'relative',
+          zIndex: 1000,
+          elevation: 12,
+        }}
+      >
+        <View
+          style={{
+            height: 50,
+            marginTop: 10,
+            marginBottom: 10,
+            flexDirection: 'row',
+          }}
+        >
+          <Image
+            source={require('../../assets/Icone_proagenda.png')}
             style={{
               height: 50,
-              marginTop: 10,
-              marginBottom: 10,
-              flexDirection: 'row',
-            }}>
-            <Image
-              source={require('../../assets/Icone_proagenda.png')}
-              style={{
-                height: 50,
-                width: 50,
-                marginStart: 10,
-                borderRadius: 100,
-              }}
-            />
-            <View style={{ height: 50, width: 190, marginStart: 10 }}>
-              <Text style={{ fontFamily: 'Arial', marginTop: 5 }}>
-                Agedamento de serviços para profissionais autônomos
+              width: 50,
+              marginStart: 10,
+              borderRadius: 100,
+            }}
+          />
+          <View style={{ height: 50, width: 190, marginStart: 10 }}>
+            <Text style={{ fontFamily: 'Arial', marginTop: 5 }}>
+              Agendamento de serviços para profissionais autônomos
+            </Text>
+          </View>
+
+          <View style={{ flexDirection: 'column', position: 'relative' }}>
+            <TouchableOpacity onPress={() => setOpen(!open)}>
+              <Image
+                source={require('../../assets/icone-perfil.png')}
+                style={{
+                  height: 50,
+                  width: 50,
+                  marginStart: 10,
+                  borderRadius: 100,
+                  marginBottom: 3,
+                  backgroundColor: '#6631d7',
+                }}
+              />
+              <Text
+                style={{
+                  fontFamily: 'Arial',
+                  fontWeight: 'bold',
+                  fontSize: 10,
+                  height: 15,
+                  width: 40,
+                  backgroundColor: 'white',
+                  borderWidth: 2,
+                  borderRadius: 5,
+                  marginStart: 15,
+                }}
+              >
+                PERFIL
               </Text>
-            </View>
-            <View style={{ flexDirection: 'column' }}>
-              <TouchableOpacity onPress={() => setOpen(!open)}>
-                <Image
-                  source={require('../../assets/icone-perfil.png')}
-                  style={{
-                    height: 50,
-                    width: 50,
-                    marginStart: 10,
-                    borderRadius: 100,
-                    marginBottom: 3,
-                    backgroundColor: '#6631d7',
-                  }}
-                />
-                <Text
-                  style={{
-                    fontFamily: 'Arial',
-                    fontWeight: 'bold',
-                    fontSize: 10,
-                    height: 15,
-                    width: 40,
-                    backgroundColor: 'white',
-                    borderWidth: 2,
-                    borderRadius: 5,
-                    marginStart: 15,
-                  }}>
-                  PERFIL
-                </Text>
-              </TouchableOpacity>
-              {open && (
+            </TouchableOpacity>
+
+            {open && (
               <View
                 style={{
                   position: 'absolute',
                   top: 53,
+                  right: 0,
                   backgroundColor: 'white',
                   borderWidth: 1,
                   borderRadius: 8,
-                  padding: 2,
-                  elevation: 10,
+                  padding: 4,
+                  zIndex: 2000,
+                  elevation: 20,
                 }}
               >
                 <TouchableOpacity
@@ -107,9 +121,12 @@ export default function Tela_Inicial({navigation}) {
                 </TouchableOpacity>
               </View>
             )}
-            </View>
           </View>
         </View>
+      </View>
+
+      {/* CONTEÚDO ROLÁVEL */}
+      <ScrollView style={{ flex: 1 }}>
         <View style={{ flexDirection: 'row', marginTop: 20 }}>
           <View style={{ height: 205, width: 180, marginStart: 15 }}>
             <Text style={{ fontFamily: 'Arial' }}>
@@ -194,6 +211,7 @@ export default function Tela_Inicial({navigation}) {
             <Text style={{ color: 'white' }}>AGENDAMENTOS</Text>
           </TouchableOpacity>
         </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 }
