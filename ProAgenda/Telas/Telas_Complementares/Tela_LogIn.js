@@ -20,9 +20,9 @@ export default function App() {
             marginBottom: 10,
             flexDirection: 'row',
           }}>
-          <TouchableOpacity onPress={() => ''}>
+          <TouchableOpacity onPress={() => navigation.navigate('TelaInicial')}>
             <Image
-              source={require('./assets/Icone_proagenda.png')}
+              source={require('../../assets/Icone_proagenda.png')}
               style={{
                 height: 50,
                 width: 50,

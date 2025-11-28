@@ -5,10 +5,12 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-
-
+import React, { useState } from "react";
 
 export default function Tela_Inicial({navigation}) {
+
+  const [open, setOpen] = useState(false);
+
   return (
     <ScrollView style={{backgroundColor: '#FFF6B6'}}>
       
@@ -35,7 +37,7 @@ export default function Tela_Inicial({navigation}) {
               </Text>
             </View>
             <View style={{ flexDirection: 'column' }}>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => setOpen(!open)}>
                 <Image
                   source={require('../../assets/icone-perfil.png')}
                   style={{
@@ -62,6 +64,49 @@ export default function Tela_Inicial({navigation}) {
                   PERFIL
                 </Text>
               </TouchableOpacity>
+              {open && (
+              <View
+                style={{
+                  position: 'absolute',
+                  top: 53,
+                  backgroundColor: 'white',
+                  borderWidth: 1,
+                  borderRadius: 8,
+                  padding: 2,
+                  elevation: 10,
+                }}
+              >
+                <TouchableOpacity
+                  onPress={() => {
+                    setOpen(false);
+                    navigation.navigate("TelaLogin");
+                  }}
+                  style={{ paddingVertical: 2 }}
+                >
+                  <Text>Login</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  onPress={() => {
+                    setOpen(false);
+                    navigation.navigate("TelaSignUp");
+                  }}
+                  style={{ paddingVertical: 2 }}
+                >
+                  <Text>Sign Up</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  onPress={() => {
+                    setOpen(false);
+                    navigation.navigate("TelaPerfil");
+                  }}
+                  style={{ paddingVertical: 2 }}
+                >
+                  <Text>Perfil</Text>
+                </TouchableOpacity>
+              </View>
+            )}
             </View>
           </View>
         </View>
